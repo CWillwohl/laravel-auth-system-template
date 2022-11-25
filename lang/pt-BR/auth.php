@@ -17,4 +17,19 @@ return [
     'password' => 'A senha informada está incorreta.',
     'throttle' => 'Muitas tentativas de login. Tente novamente em :seconds segundos.',
 
+
+    // Form labels
+
+    'login' => 'Entrar na sua conta',
+    'register' => 'Registrar uma nova conta',
+    'forgot_password' => 'Esqueceu sua senha?',
+    'reset_password' => 'Redefinir sua senha',
+    'verify_email' => 'Verificar seu endereço de e-mail',
+    
+    'name' => 'Nome Completo',
+    'email' => 'Endereço de E-mail',
+    'cpf' => 'CPF',
+    'passwrd' => 'Senha',
+    'confirm_passwrd' => 'Confirmar Senha',
+
 ];

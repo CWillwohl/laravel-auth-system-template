@@ -17,4 +17,19 @@ return [
     'password' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
+
+    // Form labels
+
+    'login' => 'Login',
+    'register' => 'Register a new account',
+    'forgot_password' => 'Forgot your password?',
+    'reset_password' => 'Reset your password',
+    'verify_email' => 'Verify your email address',
+    
+    'name' => 'Full Name',
+    'email' => 'E-mail Address',
+    'cpf' => 'CPF',
+    'passwrd' => 'Password',
+    'confirm_passwrd' => 'Confirm Password',
+
 ];
