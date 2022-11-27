@@ -2,5 +2,4 @@
     <section>
 
     </section>
-    </x-guest>
-    
+</x-guest>
