@@ -13,6 +13,8 @@ return [
     |
     */
 
+    // Buttons
+
     'btn-send' => 'Send',
     'btn-save' => 'Save',
     'btn-update' => 'Update',
@@ -20,7 +22,7 @@ return [
     'btn-cancel' => 'Cancel',
     'btn-next' => 'Next',
     'btn-back' => 'Back',
-    
+
 
 
 ];

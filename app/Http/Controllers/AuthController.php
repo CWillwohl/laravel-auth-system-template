@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Service\Auth\RegisterNewUserService;
 use App\Http\Requests\Auth\StoreRegisterRequest;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 class AuthController extends Controller
 {
@@ -84,7 +86,8 @@ class AuthController extends Controller
      */
     public function store(StoreRegisterRequest $request) : RedirectResponse
     {
-        $this->registerNewUserService->handle($request);
+        $user = $this->registerNewUserService->handle($request);
+        event(new Registered($user));
 
         return redirect()->route('auth.login');
     }
@@ -165,6 +168,24 @@ class AuthController extends Controller
         return $status === Password::PASSWORD_RESET
                     ? redirect()->route('auth.login')->with('status', __($status))
                     : back()->withErrors(['email' => [__($status)]]);
+    }
+
+    public function resendVerificationEmail() : RedirectResponse
+    {
+        if (Auth::user()->hasVerifiedEmail()) {
+            return redirect()->route('dashboard');
+        }
+
+        Auth::user()->sendEmailVerificationNotification();
+
+        return back()->with('status', 'success');
+    }
+
+    public function verifiedEmail(EmailVerificationRequest $request) : RedirectResponse
+    {
+        $request->fulfill();
+
+        return redirect()->route('dashboard');
     }
 
     /**
