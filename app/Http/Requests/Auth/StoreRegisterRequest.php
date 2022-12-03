@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Auth;
 
+use App\Rules\CPF;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreRegisterRequest extends FormRequest
@@ -26,7 +27,7 @@ class StoreRegisterRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'cpf' => 'required|string|max:14|unique:users',
+            'cpf' => ['required','string','min:14','max:14','unique:users', new CPF],
             'password' => 'required|string|min:4|confirmed',
         ];
     }

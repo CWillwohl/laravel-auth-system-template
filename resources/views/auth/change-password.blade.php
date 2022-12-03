@@ -1,7 +1,7 @@
 <x-guest title="Login">
     <section class="w-full min-h-screen flex justify-center items-center">
         <div class="w-full lg:w-2/3 h-auto m-8 flex flex-row justify-center">
-            <div class="hidden lg:flex bg-white w-1/3 p-8 flex-col justify-between items-center">
+            <div class="hidden lg:flex bg-white w-1/3 p-8 flex-col justify-center items-center">
                 <img src="{{ asset('images/layout-images/logo.svg') }}" alt="Landing Page" class="w-full">
             </div>
             <div class="bg-white w-full lg:w-1/2 p-8 flex flex-col justify-between items-center">

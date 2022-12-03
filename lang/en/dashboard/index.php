@@ -13,17 +13,14 @@ return [
     |
     */
 
+
+    // Body
+
+    'welcome' => 'Welcome to your dashboard!',
+    'logged' => 'You are logged in!',
+
     // Buttons
 
-    'btn-send' => 'Send',
-    'btn-save' => 'Save',
-    'btn-update' => 'Update',
-    'btn-delete' => 'Delete',
-    'btn-cancel' => 'Cancel',
-    'btn-next' => 'Next',
-    'btn-back' => 'Back',
-
-
+    'logout' => 'Logout',
+    
 ];
-
-?>

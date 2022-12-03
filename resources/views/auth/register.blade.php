@@ -1,12 +1,12 @@
 <x-guest>
     <section class="w-full min-h-screen flex justify-center items-center">
     <div class="w-full lg:w-2/3 h-auto m-8 flex flex-row justify-center">
-        <div class="hidden lg:flex bg-white w-1/2 p-8 flex-col justify-between items-center">
+        <div class="hidden lg:flex bg-white w-1/2 p-8 flex-col justify-center items-center">
             <img src="{{ asset('images/layout-images/logo.svg') }}" alt="Landing Page" class="w-full">
         </div>
-        <div class="bg-white w-full lg:w-1/2 p-8 flex flex-col justify-between items-center">
+        <div class="bg-white w-full lg:w-1/2 p-8 flex flex-col justify-between items-center space-y-2">
             <h1 class="text-2xl font-bold text-center">{{ __('auth.register') }}</h1>
-            <form method="POST" action="{{ route('auth.store') }}" class="w-full flex flex-col justify-center items-center text-center first-line:space-y-2">
+            <form method="POST" action="{{ route('auth.store') }}" class="w-full flex flex-col justify-center items-center text-center space-y-2">
                 @csrf
                 <a href="{{ route('auth.login') }}" class="text-green-400 hover:text-green-500 duration-500">Já possui uma conta? clique aqui.</a>
                 <div class="w-full flex flex-col justify-center items-center">

@@ -108,6 +108,7 @@ return [
         'uncompromised'    => 'A senha que você inseriu em :attribute está em um vazamento de dados.'
                               . ' Por favor escolha uma senha diferente.',
     ],
+    'cpf_invalid'          => 'O CPF inserido não é valido',
     'present'              => 'O campo :attribute deve estar presente.',
     'regex'                => 'O campo :attribute tem um formato inválido.',
     'required'             => 'O campo :attribute é obrigatório.',

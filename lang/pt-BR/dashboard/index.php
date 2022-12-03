@@ -13,17 +13,13 @@ return [
     |
     */
 
+
+    // Body
+
+    'welcome' => 'Bem-vindo ao seu painel!',
+    'logged' => 'Você está logado!',
+
     // Buttons
 
-    'btn-send' => 'Send',
-    'btn-save' => 'Save',
-    'btn-update' => 'Update',
-    'btn-delete' => 'Delete',
-    'btn-cancel' => 'Cancel',
-    'btn-next' => 'Next',
-    'btn-back' => 'Back',
-
-
+    'logout' => 'Sair',
 ];
-
-?>
