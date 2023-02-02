@@ -15,7 +15,7 @@
                             </div>
                         </div>
                     @endif
-                    <form method="POST" action="{{ route('auth.resend-verification-email') }}" class="w-full flex flex-col justify-center items-center space-y-2">
+                    <form method="POST" action="{{ route('verification.send') }}" class="w-full flex flex-col justify-center items-center space-y-2">
                         @csrf
                         <button type="submit" class="w-full bg-green-400 hover:bg-green-500 shadow-md duration-500 text-white rounded-sm p-2 mt-4">{{ __('auth.re-send_mail') }}</button>
                     </form>

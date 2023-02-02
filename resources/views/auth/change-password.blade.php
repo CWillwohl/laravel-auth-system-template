@@ -8,7 +8,7 @@
 
                 <h1 class="text-2xl font-bold text-center">{{ __('auth.reset_password') }}</h1>
                 <div class="w-full flex-col">
-                    <form method="POST" action="{{ route('auth.update-password') }}" class="w-full flex flex-col justify-center items-center space-y-2">
+                    <form method="POST" action="{{ route('password.email') }}" class="w-full flex flex-col justify-center items-center space-y-2">
                         @csrf
                         {{-- Dados vindo do Controllador para fazer a alteração de senha. --}}
 

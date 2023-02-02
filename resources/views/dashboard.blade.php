@@ -11,6 +11,4 @@
             </form>
         </div>
     </section>
-
-    
 </x-signed>
